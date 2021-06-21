@@ -6,11 +6,11 @@ import requests
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhhhh")
+stellar_quest_keypair = Keypair.from_secret("SBGMYUBQ...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
-other_account = "THE ACCOUNT YOU SPONSOR"
+other_account = server.load_account("GAT5HZQKWP3S...")
 
 # 2. Create Transaction
 print("Building Transaction...")
@@ -24,11 +24,11 @@ transaction = TransactionBuilder(
     network_passphrase=Network.TESTNET_NETWORK_PASSPHRASE,
     base_fee=base_fee,
 ).append_payment_op(
-    destination=other_account, 
+    destination="GAT5HZQKWP3SEMOGDVO7NX3D3JNQHKCBR32FAI45V7V4YVPAGTPRWKUY", 
     amount="10",
     asset_code="XLM",
 ).append_revoke_account_sponsorship_op(
-	account_id=other_account,
+	account_id="GAT5HZQKWP3SEMOGDVO7NX3D3JNQHKCBR32FAI45V7V4YVPAGTPRWKUY",
 ).build()
 
 

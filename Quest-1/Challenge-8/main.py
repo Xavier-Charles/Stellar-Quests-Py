@@ -2,16 +2,16 @@
 Challenge 8: Path Payments
 """
 from stellar_sdk import Server, Keypair, TransactionBuilder, Network, Asset
-import json
+# import json
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhhhh")
+stellar_quest_keypair = Keypair.from_secret("SAFFHITK2NKOC...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
 # 2. Create Asset Objects
-asset_to_buy = Asset("SRT", "GCDNJUBQSX7AJWLJACMJ7I4BC3Z47BQUTMHEICZLE6MU4KQBRYG5JY6B") 
+asset_to_buy = Asset("SRT", "GCDNJUBQSX7AJWLJACMJ7I4BC3Z47BQUTMHEICZLE6MU4KQBRYG5JY6B") # This address was stated in the quest
 native_asset = Asset('XLM')
 
 # 3. Get Path Payment

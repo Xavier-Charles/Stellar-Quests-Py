@@ -7,7 +7,7 @@ import requests
 # 1. Load Keys
 # In this case this account will be the distributor.
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhh")
+stellar_quest_keypair = Keypair.from_secret("SAFFHITK2NKOCJEA...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
@@ -31,7 +31,7 @@ response = requests.get(url, params={'addr': random_keypair.public_key})
 print(f"Friendbot responded with {response}")
 
 # 4. Create an object to represent the new asset
-asset = Asset("HEYY", random_keypair_pub_key)
+asset = Asset("XHAR", random_keypair_pub_key)
 
 # 5. Distributor Account should trust the Issuing account
 print("Building Transaction...")

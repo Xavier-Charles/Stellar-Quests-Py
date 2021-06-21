@@ -6,7 +6,7 @@ import requests
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhhhh")
+stellar_quest_keypair = Keypair.from_secret("SAFFHITK2NKOC...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
@@ -17,7 +17,7 @@ random_keypair = Keypair.random()
 random_keypair_pub_key = random_keypair.public_key
 random_keypair_priv_key = random_keypair.secret
 
-# 3. Fund Another account using TestBot
+# 3. Fund Second account using TestBot
 print("Funding Random Account...")
 
 url = 'https://friendbot.stellar.org'

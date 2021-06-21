@@ -6,13 +6,17 @@ import requests
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhhhh")
+stellar_quest_keypair = Keypair.from_secret("SBGMYUBQNPPW6EVPK...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
 other_account = Keypair.random()
 other_account_pub_key = other_account.public_key
 other_account_priv_key = other_account.secret
+
+print('⚠️ SAVE THE FOLLOWING PUBLIC AND PRIVATE KEY! ISSUING ACCOUNT:')
+print(other_account_pub_key)
+print(other_account_priv_key)
 
 # 2. Create Transaction
 print("Building Transaction...")

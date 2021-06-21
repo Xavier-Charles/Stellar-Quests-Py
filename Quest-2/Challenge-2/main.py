@@ -6,7 +6,7 @@ import requests
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhhhhhh")
+stellar_quest_keypair = Keypair.from_secret("SBGMYUBQNPPW6EV...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
@@ -31,7 +31,7 @@ print(f"Friendbot responded with {response}")
 
 # 4. Create Multi Transaction
 print("Building Transaction...")
-asset = Asset("HUGS", random_keypair_pub_key)
+asset = Asset("XHAR2", random_keypair_pub_key)
 
 base_fee = server.fetch_base_fee()
 account = server.load_account(quest_account_pub_key)
@@ -45,7 +45,7 @@ transaction = (
         asset_code=asset.code, asset_issuer=asset.issuer
     ).append_payment_op(
         destination=quest_account_pub_key,
-        amount="42", # You get the point....
+        amount="32", # You get the point....
         asset_code=asset.code,
         asset_issuer=asset.issuer,
         source=asset.issuer

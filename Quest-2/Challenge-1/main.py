@@ -7,7 +7,7 @@ import requests
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")
-stellar_quest_keypair = Keypair.from_secret("Shhhhh")
+stellar_quest_keypair = Keypair.from_secret("SBGMYUBQNP...")
 quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
@@ -34,7 +34,7 @@ random_account = server.load_account(random_keypair_pub_key)
 
 # 5. Create a Memo :)
 memo_hash = hashlib.sha256()
-memo_hash.update(b"<INSERT STRING FROM CHALLENGE 1>")
+memo_hash.update(b"Stellar Quest Series 2")
 
 transaction = (
     TransactionBuilder(
